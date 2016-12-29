@@ -13,4 +13,4 @@ There are no quotation marks in the input file.
 The output file specification is 6 columns: "city","provence","time","latitude","longitude","zscore" DELIMITER_FOR_NEXT_ROW
 
 Sources used for this project:
-http://resources.esri.com/help/9.3/arcgisengine/java/gp_toolref/spatial_statistics_tools/how_hot_spot\_analysis_colon_getis_ord_gi_star_spatial_statistics_works.htm
+http://resources.esri.com/help/9.3/arcgisengine/java/gp_toolref/spatial_statistics_tools/how_hot_spot_analysis_colon_getis_ord_gi_star_spatial_statistics_works.htm
