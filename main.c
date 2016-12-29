@@ -10,6 +10,10 @@
  */
 int main(int argc, char** argv)
 {
+	const char csv_delimiter[2] = {
+		(char) 0x0D, (char) 0x0A
+	};
+
 	FILE *file;
 
 	char x;
@@ -90,7 +94,9 @@ int main(int argc, char** argv)
 	}
 
 	for (i = 0; i < data_num; ++i) {
-		fprintf(file, "%s,%s,%ld,%f,%f,%f\n", data[i].city, data[i].pro, data[i].time, data[i].x, data[i].y, data[i].z_score);
+		// Almost forgot to export as .csv file format
+		fprintf(file, "%s,%s,%ld,%f,%f,%f%s", data[i].city, data[i].pro, data[i].time,
+			data[i].x, data[i].y, data[i].z_score, (strcmp(argv[2] + strlen(argv[2]) - 4, ".csv") == 0) ? csv_delimiter:"\n");
 	}
 
 	fclose(file);
